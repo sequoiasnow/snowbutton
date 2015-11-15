@@ -1,7 +1,7 @@
 
 @mixin snowbutton( $color: $color__snowbutton-default ) {
     @include transition( all $timing__snowbutton );
-    @include border-radius( #{ ($padding__snowbutton + $font__size-button / 2) * 1.2 } );
+    @include border-radius( #{ ($padding__snowbutton + $font__size-snowbutton / 2) * 1.2 } );
 
     margin: #{$padding__snowbutton} 0;
     padding: $padding__snowbutton;
@@ -13,9 +13,7 @@
 
     cursor: pointer;
 
-    font-family: $font-headings;
-    font-weight: $font__weight-button;
-    font-size: $font__size-button;
+    font-size: $font__size-snowbutton;
 
     background-color: transparent;
 
@@ -28,7 +26,7 @@
     color: $color;
 
     &:hover {
-        color: $color__text-dark;
+        color: $color__snowbutton-text-dark;
         background-color: $color;
     }
 
