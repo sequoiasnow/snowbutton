@@ -1,0 +1,9 @@
+@mixin s-button-color( $color ) {
+    border: 1px solid $color;
+    color: $color;
+
+    &:hover {
+        color: $color__text-dark;
+        background-color: $color;
+    }
+}

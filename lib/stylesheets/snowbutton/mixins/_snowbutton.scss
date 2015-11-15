@@ -1,0 +1,41 @@
+
+@mixin snowbutton( $color: $color__snowbutton-default ) {
+    @include transition( all $timing__snowbutton );
+    @include border-radius( #{ ($padding__snowbutton + $font__size-button / 2) * 1.2 } );
+
+    margin: #{$padding__snowbutton} 0;
+    padding: $padding__snowbutton;
+    display: inline-block;
+
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 7px;
+
+    cursor: pointer;
+
+    font-family: $font-headings;
+    font-weight: $font__weight-button;
+    font-size: $font__size-button;
+
+    background-color: transparent;
+
+    &:hover {
+        padding-left: $padding__snowbutton * 2;
+        padding-right: $padding__snowbutton * 2;
+    }
+
+    border: 1px solid $color;
+    color: $color;
+
+    &:hover {
+        color: $color__text-dark;
+        background-color: $color;
+    }
+
+    @each $name, $val in $colors__snowbutton {
+        &.color-#{$name} {
+            @include snowbutton-color( $val );
+        }
+    }
+
+}
